@@ -25,7 +25,7 @@ function index() {
     }
   }, []);
 
-  const block = () => {
+  const block = (route) => {
     const covering = anime({
       targets: ".cover_block",
       d: {
@@ -37,7 +37,7 @@ function index() {
       loop: false,
     });
     covering.restart();
-    Router.push("/portfolio");
+    Router.push(route);
   };
   return (
     <motion.div
@@ -66,12 +66,57 @@ function index() {
           />
         </svg>
       </div>
+      <motion.div className={styles.cover_hello}>
+        <motion.h2
+          initial={{
+            y: 60,
+            opacity: 0,
+          }}
+          animate={{
+            y: 0,
+            opacity: 1,
+            transition: {
+              duration: 1.6,
+              delay: 2,
+            },
+          }}
+        >
+          Hi ! this is Onur
+        </motion.h2>
+        <motion.small
+          initial={{
+            y: 60,
+            opacity: 0,
+          }}
+          animate={{
+            y: 0,
+            opacity: 1,
+            transition: {
+              duration: 1.6,
+              delay: 2.3,
+            },
+          }}
+        >
+          frontend lover
+        </motion.small>
+      </motion.div>
+      <div className={styles.cover_links}>
+        <a
+          onClick={() => {
+            block("/portfolio");
+          }}
+        >
+          portfolio
+        </a>
 
-      <a onClick={block}>portfolio</a>
-
-      <Link href="contact">
-        <a> contact</a>
-      </Link>
+        <a
+          onClick={() => {
+            block("/contact");
+          }}
+        >
+          contact
+        </a>
+      </div>
     </motion.div>
   );
 }

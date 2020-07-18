@@ -2,6 +2,10 @@
   width: 100vw;
   height: 100vh;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   &_main {
     & > svg {
       pointer-events: none;
@@ -14,9 +18,25 @@
     }
   }
 
-  & > a {
-    font-size: 5rem;
-    display: inline-block;
-    margin-top: 20rem;
+  &_hello {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    overflow: hidden;
+    & h2 {
+      font-size: 6rem;
+      font-weight: 500;
+      text-transform: capitalize;
+    }
+    & small {
+      margin-left: auto;
+      text-transform: capitalize;
+      letter-spacing: 1px;
+    }
+  }
+  &_links {
+    width: 100%;
+    display: flex;
   }
 }
