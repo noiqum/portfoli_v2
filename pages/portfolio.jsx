@@ -49,6 +49,14 @@ function Portfolio() {
       }}
       className={styles.portfolio}
     >
+      <motion.div className={styles.portfolio_nav}>
+        <Link href="/">
+          <a>home</a>
+        </Link>
+        <Link href="/contact">
+          <a>contact</a>
+        </Link>
+      </motion.div>
       <motion.div
         className={styles.portfolio_header}
         variants={header}
@@ -80,13 +88,6 @@ function Portfolio() {
           s
         </motion.span>
       </motion.div>
-
-      <Link href="/">
-        <a>home</a>
-      </Link>
-      <Link href="/contact">
-        <a>contact</a>
-      </Link>
     </motion.div>
   );
 }

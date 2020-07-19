@@ -9,6 +9,22 @@
   align-items: center;
   flex-direction: column;
   overflow: hidden;
+
+  &_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    & a {
+      font-size: 3rem;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      text-transform: uppercase;
+      columns: #ffffff;
+    }
+  }
+
   &_header {
     text-transform: uppercase;
     display: inline-block;

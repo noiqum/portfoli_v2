@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import Link from "next/link";
+
 import Router from "next/router";
 ///library/////////
 import { motion } from "framer-motion";
@@ -9,7 +9,15 @@ import anime from "animejs";
 import styles from "../css/index.module.scss";
 
 function index() {
+  /////refs///////
+
   const coverRef = useRef(null);
+  const link1Ref = useRef(null);
+  const link2Ref = useRef(null);
+  const cursorRef = useRef(null);
+
+  /////////////\\\\\\\\\\\\\\\\
+
   useEffect(() => {
     if (coverRef.current) {
       anime({
@@ -21,6 +29,45 @@ function index() {
         easing: "easeOutQuad",
         duration: 4000,
         loop: false,
+      });
+    }
+    if (link1Ref.current && link2Ref.current) {
+      gsap.from(".link1", {
+        opacity: 0,
+        x: -200,
+        duration: 2,
+        ease: "power3.inout",
+        delay: 2,
+      });
+      gsap.from(".link2", {
+        opacity: 0,
+        x: 200,
+        duration: 2,
+        ease: "power3.inout",
+        delay: 2,
+      });
+
+      document.addEventListener("mousemove", (e) => {
+        if (cursorRef.current) {
+          cursorRef.current.setAttribute(
+            "style",
+            `top:${e.pageY - 10}px;left:${e.pageX - 10}px`
+          );
+          console.log(link2Ref.current.offsetTop, link2Ref.current.offsetLeft);
+          const link2Y = link2Ref.current.offsetTop;
+          const link2W = link2Ref.current.offsetWidth;
+          const link2X = link2Ref.current.offsetLeft;
+          const link2H = link2Ref.current.offsetHeight;
+
+          if (e.pageY > link2Y && e.pageY < link2Y + link2H) {
+            if (e.pageX > link2X && e.pageX < link2X + link2W) {
+              console.log("gotta");
+              cursorRef.current.classList.add("change");
+            } else {
+              cursorRef.current.classList.remove("change");
+            }
+          }
+        }
       });
     }
   }, []);
@@ -102,6 +149,8 @@ function index() {
       </motion.div>
       <div className={styles.cover_links}>
         <a
+          ref={link1Ref}
+          className="link1"
           onClick={() => {
             block("/portfolio");
           }}
@@ -110,12 +159,17 @@ function index() {
         </a>
 
         <a
+          ref={link2Ref}
+          className="link2"
           onClick={() => {
             block("/contact");
           }}
         >
           contact
         </a>
+      </div>
+      <div ref={cursorRef} className={styles.cursor}>
+        {" "}
       </div>
     </motion.div>
   );
