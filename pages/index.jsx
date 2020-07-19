@@ -53,7 +53,7 @@ function index() {
             "style",
             `top:${e.pageY - 10}px;left:${e.pageX - 10}px`
           );
-          console.log(link2Ref.current.offsetTop, link2Ref.current.offsetLeft);
+
           const link2Y = link2Ref.current.offsetTop;
           const link2W = link2Ref.current.offsetWidth;
           const link2X = link2Ref.current.offsetLeft;
@@ -61,11 +61,13 @@ function index() {
 
           if (e.pageY > link2Y && e.pageY < link2Y + link2H) {
             if (e.pageX > link2X && e.pageX < link2X + link2W) {
-              console.log("gotta");
-              cursorRef.current.classList.add("change");
+              console.log(link2X, link2W);
+              cursorRef.current.setAttribute("id", "change");
             } else {
-              cursorRef.current.classList.remove("change");
+              cursorRef.current.setAttribute("id", "nonchange");
             }
+          } else {
+            cursorRef.current.setAttribute("id", "nonchange");
           }
         }
       });
