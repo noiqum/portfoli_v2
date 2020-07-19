@@ -4,16 +4,19 @@
   background-color: #023e7d;
   width: 100vw;
   height: 100vh;
-
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
+  overflow: hidden;
   &_header {
     text-transform: uppercase;
     display: inline-block;
     width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     & span {
       font-size: 5rem;
