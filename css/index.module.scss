@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 .cover {
   width: 100vw;
   height: 100vh;
@@ -24,15 +26,18 @@
     align-items: flex-start;
     flex-direction: column;
     overflow: hidden;
+    padding: 0 2rem;
     & h2 {
       font-size: 6rem;
       font-weight: 500;
       text-transform: capitalize;
+      color: $navy-1;
     }
     & small {
       margin-left: auto;
       text-transform: capitalize;
       letter-spacing: 1px;
+      color: $blue-2;
     }
   }
   &_links {

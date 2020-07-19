@@ -33,7 +33,7 @@ function index() {
           "M0 1017V1H1920V1017C1920 1017 1817.46 1020.53 1666 1017C1423 1011.33 1278.92 1025.43 1036 1017C908.024 1012.56 736.036 1019.1 608 1017C379.198 1013.26 0 1017 0 1017Z",
       },
       easing: "easeOutQuad",
-      duration: 4000,
+      duration: 2000,
       loop: false,
     });
     covering.restart();
@@ -44,8 +44,8 @@ function index() {
       exit={{
         opacity: 0,
         transition: {
-          duration: 2,
-          delay: 4,
+          duration: -2,
+          delay: 2,
         },
       }}
       className={styles.cover}
@@ -62,7 +62,7 @@ function index() {
           <path
             className="cover_block"
             d="M0 7V1H1920V4.5625C1920 4.5625 1684.25 2.64388 1532.79 2.3125C1289.79 1.78085 1153.77 5.3528 910.846 4.5625C782.87 4.14615 711.861 2.50891 583.824 2.3125C355.023 1.96151 0 7 0 7Z"
-            fill="#3058C1"
+            fill="#023e7d"
           />
         </svg>
       </div>
