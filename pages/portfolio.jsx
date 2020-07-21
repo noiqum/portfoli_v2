@@ -19,7 +19,18 @@ const header = {
     },
   },
 };
-
+const links = {
+  initial: {
+    y: 0,
+  },
+  animate: {
+    transition: {
+      delayChildren: 0.6,
+      staggerChildren: 0.3,
+      staggerDirection: 1,
+    },
+  },
+};
 const letter = {
   initial: (custom) => {
     return {
@@ -39,7 +50,7 @@ const letter = {
     },
   },
 };
-const project = {
+const link_item = {
   initial: {
     y: 800,
   },
@@ -59,12 +70,16 @@ const projectList = {
     explanation:
       "An app provides a platform where event could be arranged, people with mutual interest can meet and share precious moments",
     img: "/agoras.png",
+    github: "https://github.com/noiqum/agora_new",
+    live: "https://agora-event-platform.web.app/",
   },
   corner: {
     name: "corner",
     tools: ["react", "redux", "sass", "firebase", "stripe"],
     explanation: "E-commerce store that outfits are on sell in",
     img: "/corner.png",
+    github: "https://github.com/noiqum/corner",
+    live: "https://corner-e-commerce.web.app/",
   },
   stocky: {
     name: "stocky",
@@ -72,12 +87,16 @@ const projectList = {
     explanation:
       "stocky has goal that is tracking stock and capturing current items at the stock,it gives a chance of creating a database to track stock",
     img: "/tracker.png",
+    github: "https://github.com/noiqum/inventory_tracking_app_new",
+    live: "https://inventory-e9650.web.app/",
   },
   coder: {
     name: "coder academy",
     explanation: "landing page of coder academy bootcamp",
     img: "/coder.png",
     tools: ["vanilla js", "SASS", "firebase"],
+    github: "https://github.com/noiqum/coderAcademy_project",
+    live: "https://coder-academy-f9ed1.web.app/",
   },
 };
 
@@ -150,7 +169,7 @@ function Portfolio() {
       <motion.div className={styles.portfolio_frame}>
         <motion.div
           className={styles.portfolio_frame_links}
-          variants={header}
+          variants={links}
           animate="animate"
           initial="initial"
         >
@@ -158,7 +177,7 @@ function Portfolio() {
             onClick={() => {
               projectHandle("agora");
             }}
-            variants={project}
+            variants={link_item}
           >
             Agora
           </motion.span>
@@ -166,7 +185,7 @@ function Portfolio() {
             onClick={() => {
               projectHandle("agora");
             }}
-            variants={project}
+            variants={link_item}
           >
             1
           </motion.span>
@@ -174,7 +193,7 @@ function Portfolio() {
             onClick={() => {
               projectHandle("corner");
             }}
-            variants={project}
+            variants={link_item}
           >
             Corner
           </motion.span>
@@ -182,7 +201,7 @@ function Portfolio() {
             onClick={() => {
               projectHandle("corner");
             }}
-            variants={project}
+            variants={link_item}
           >
             2
           </motion.span>
@@ -190,7 +209,7 @@ function Portfolio() {
             onClick={() => {
               projectHandle("stocky");
             }}
-            variants={project}
+            variants={link_item}
           >
             Stocky
           </motion.span>
@@ -198,7 +217,7 @@ function Portfolio() {
             onClick={() => {
               projectHandle("stocky");
             }}
-            variants={project}
+            variants={link_item}
           >
             3
           </motion.span>
@@ -206,7 +225,7 @@ function Portfolio() {
             onClick={() => {
               projectHandle("coder");
             }}
-            variants={project}
+            variants={link_item}
           >
             Coder
           </motion.span>
@@ -214,7 +233,7 @@ function Portfolio() {
             onClick={() => {
               projectHandle("coder");
             }}
-            variants={project}
+            variants={link_item}
           >
             4
           </motion.span>

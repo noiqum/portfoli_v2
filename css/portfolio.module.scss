@@ -67,7 +67,8 @@
     justify-content: flex-start;
     align-items: center;
     min-width: 100%;
-    min-height: calc(100%-10rem);
+    min-height: 70%;
+    margin-bottom: 2rem;
     @media screen and (max-width: 600px) {
       padding: 5px;
     }

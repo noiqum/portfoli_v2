@@ -20,13 +20,25 @@ function Project({ project }) {
       className={styles.project}
     >
       <img src={project.img} alt="project_image" />
-      <div> Name : {project.name}</div>
-      <div>{project.explanation}</div>
-      <div>
-        Tools :
-        {project.tools.map((i, index) => {
-          return <span key={index}>{i} </span>;
-        })}
+      <div className={styles.project_links}>
+        <a href={project.github} target="blank">
+          Github
+        </a>
+        <a href={project.live} target="blank">
+          Live Demo
+        </a>
+      </div>
+      <div className={styles.project_container}>
+        {" "}
+        <em> Name : </em>
+        {project.name}
+        <div>{project.explanation}</div>
+        <div>
+          <em>Tools :</em>
+          {project.tools.map((i, index) => {
+            return <span key={index}>{i}, </span>;
+          })}
+        </div>
       </div>
     </motion.div>
   );
