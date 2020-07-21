@@ -57,6 +57,9 @@
       text-transform: uppercase;
       letter-spacing: 2px;
       color: $navy-1;
+      @media screen and (max-width: 600px) {
+        cursor: pointer;
+      }
     }
   }
 }
@@ -72,4 +75,7 @@
   left: 100px;
   z-index: 200;
   pointer-events: none;
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 }

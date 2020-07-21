@@ -59,9 +59,19 @@ function index() {
           const link2X = link2Ref.current.offsetLeft;
           const link2H = link2Ref.current.offsetHeight;
 
-          if (e.pageY > link2Y && e.pageY < link2Y + link2H) {
-            if (e.pageX > link2X && e.pageX < link2X + link2W) {
-              console.log(link2X, link2W);
+          const link1Y = link1Ref.current.offsetTop;
+          const link1W = link1Ref.current.offsetWidth;
+          const link1X = link1Ref.current.offsetLeft;
+          const link1H = link1Ref.current.offsetHeight;
+
+          if (
+            (e.pageY > link2Y && e.pageY < link2Y + link2H) ||
+            (e.pageY > link1Y && e.pageY < link1Y + link1H)
+          ) {
+            if (
+              (e.pageX > link2X && e.pageX < link2X + link2W) ||
+              (e.pageX > link1X && e.pageX < link1X + link1W)
+            ) {
               cursorRef.current.setAttribute("id", "change");
             } else {
               cursorRef.current.setAttribute("id", "nonchange");
