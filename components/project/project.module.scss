@@ -8,6 +8,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   margin-top: 2rem;
+  height: max-content;
   @media screen and (min-width: 900px) {
     display: grid;
     grid-template-columns: 50% 1fr;
