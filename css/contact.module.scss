@@ -1,0 +1,90 @@
+.contact {
+  background-color: #023e7d;
+  width: 100vw;
+  height: 100vh;
+
+  &_links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 2rem;
+    & a {
+      font-size: 2rem;
+      color: #ffffff;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      &:hover {
+        color: peru;
+      }
+    }
+  }
+  &_hi {
+    width: 100%;
+    overflow: hidden;
+    & > div {
+      font-size: 10rem;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      font-weight: 700;
+
+      background: #f7b224; /* fallback for old browsers */
+      background-image: linear-gradient(
+        to bottom,
+        rgb(247, 178, 36) 30%,
+        rgb(200, 108, 121) 80%
+      );
+      background: -webkit-linear-gradient(
+        undefineddeg,
+        rgb(247, 178, 36) 30%,
+        rgb(200, 108, 121) 80%
+      ); /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(
+        undefineddeg,
+        rgb(247, 178, 36) 30%,
+        rgb(200, 108, 121) 80%
+      );
+      background-clip: text;
+      color: transparent;
+      @media screen and (min-width: 1200px) {
+        font-size: 15rem;
+      }
+    }
+  }
+  & input {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: gray;
+    font-size: 2rem;
+
+    &:focus {
+      background-color: transparent;
+    }
+
+    & + span {
+      font-size: 2rem;
+      letter-spacing: 1px;
+      color: gray;
+      background-color: transparent;
+      border-radius: 15px;
+      border: 1px solid gray;
+      padding: 5px 10px;
+      text-align: center;
+      cursor: pointer;
+      margin: 1rem;
+      &:hover {
+        background-color: rgba(#ffffff, 0.1);
+        color: #ffffff;
+      }
+      &:focus {
+        transform: translateY(3px);
+      }
+    }
+  }
+}

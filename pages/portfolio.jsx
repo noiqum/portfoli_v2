@@ -9,10 +9,13 @@ import styles from "../css/portfolio.module.scss";
 
 const header = {
   initial: {
-    y: 0,
+    opacity: 0,
   },
   animate: {
+    opacity: 1,
     transition: {
+      duration: 1.8,
+      ease: "easeIn",
       delayChildren: 0.6,
       staggerChildren: 0.3,
       staggerDirection: 1,
