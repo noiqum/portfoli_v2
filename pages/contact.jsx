@@ -5,6 +5,31 @@ import styles from "../css/contact.module.scss";
 
 function Contact() {
   const [email] = useState("onurcoskun99@gmail.com");
+  /////framer-motion objects/////////
+  const social = {
+    animate: {
+      transition: {
+        delayChildren: 0.6,
+        staggerChildren: 0.6,
+        staggerDirection: 1,
+      },
+    },
+  };
+  const item = {
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 2.5,
+        delay: 2,
+        ease: "easeIn",
+      },
+    },
+    initial: {
+      y: 100,
+      opacity: 0,
+    },
+  };
   return (
     <motion.div
       exit={{
@@ -62,6 +87,47 @@ function Contact() {
       >
         Copy
       </span>
+      <motion.a
+        href="/onur_coskun_cv.pdf"
+        download
+        initial={{ x: "100vw", rotate: 0 }}
+        animate={{
+          x: 0,
+          rotate: 360,
+          transition: { duration: 2.3, ease: "easeInOut", delay: 3 },
+        }}
+        className={styles.contact_resume}
+      >
+        Resume
+      </motion.a>
+      <motion.div
+        className={styles.contact_social}
+        variants={social}
+        animate="animate"
+        initial="initial"
+      >
+        <motion.a
+          href="https://twitter.com/oneur"
+          target="blank"
+          variants={item}
+        >
+          twitter
+        </motion.a>
+        <motion.a
+          href="https://www.linkedin.com/in/oneur"
+          target="blank"
+          variants={item}
+        >
+          linkedin
+        </motion.a>
+        <motion.a
+          href="https://github.com/noiqum"
+          target="blank"
+          variants={item}
+        >
+          github
+        </motion.a>
+      </motion.div>
     </motion.div>
   );
 }

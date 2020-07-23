@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-
+import Head from "next/head";
 import Router from "next/router";
 ///library/////////
 import { motion } from "framer-motion";
@@ -109,6 +109,12 @@ function index() {
       }}
       className={styles.cover}
     >
+      <Head>
+        <title>Onur Coskun</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link rel="shortcut icon" href="favicon.svg" type="svg" />
+      </Head>
       <div ref={coverRef} className={styles.cover_main}>
         <svg
           width="100%"
