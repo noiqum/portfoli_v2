@@ -209,7 +209,7 @@ function Portfolio() {
           </motion.span>
           <motion.span
             onClick={() => {
-              projectHandle("stocky");
+              projectHandle("challenge");
             }}
             variants={link_item}
           >
@@ -217,7 +217,7 @@ function Portfolio() {
           </motion.span>
           <motion.span
             onClick={() => {
-              projectHandle("stocky");
+              projectHandle("challenge");
             }}
             variants={link_item}
           >
