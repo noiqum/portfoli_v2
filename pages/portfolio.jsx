@@ -213,7 +213,7 @@ function Portfolio() {
             }}
             variants={link_item}
           >
-            Stocky
+            Challenge
           </motion.span>
           <motion.span
             onClick={() => {
