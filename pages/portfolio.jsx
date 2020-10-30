@@ -88,7 +88,7 @@ const projectList = {
     name: "100 Days",
     tools: ["react","redux","sass", "firebase"],
     explanation:"100 Days of Coding gives you a path to gain at least grasp modern Frontend Development knowledge recent days,you start from strach by following resources link to every card task links.You can share end of day your process via twitter with 100daysofcoding hashtag and you can track your process by saving to firestore database ,whenever you log in back you will reach your process",
-    img: "/100.png",
+    img: "/challenge.png",
     github: "https://github.com/noiqum/100-days-of-code",
     live: "https://coding-challenge-29d43.web.app/",
   },
