@@ -107,11 +107,11 @@ function Contact() {
         initial="initial"
       >
         <motion.a
-          href="https://twitter.com/oneur"
+          href="https://codepen.io/onurcoskun99"
           target="blank"
           variants={item}
         >
-          twitter
+          codepen
         </motion.a>
         <motion.a
           href="https://www.linkedin.com/in/oneur"
