@@ -100,6 +100,14 @@ const projectList = {
     github: "https://github.com/noiqum/coderAcademy_project",
     live: "https://coder-academy-f9ed1.web.app/",
   },
+  wallet: {
+    name: "wallet",
+    explanation: "personal expense tracker",
+    img: "/wallet.png",
+    tools: ["React","Context API","TypeScript","Webpack","Eslint","NODEjs","Express", "SASS","JWT", "Netlify","Heroku"],
+    github: "https://github.com/noiqum/wallet",
+    live: "https://admiring-hypatia-58d070.netlify.app/",
+  },
 };
 
 function Portfolio() {
@@ -238,6 +246,22 @@ function Portfolio() {
             variants={link_item}
           >
             4
+          </motion.span>
+          <motion.span
+            onClick={() => {
+              projectHandle("wallet");
+            }}
+            variants={link_item}
+          >
+            Wallet
+          </motion.span>
+          <motion.span
+            onClick={() => {
+              projectHandle("wallet");
+            }}
+            variants={link_item}
+          >
+            5
           </motion.span>
         </motion.div>
         <motion.div className={styles.portfolio_frame_project}>
