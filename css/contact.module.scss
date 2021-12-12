@@ -30,7 +30,7 @@
     width: 100%;
     overflow: hidden;
     & > div {
-      font-size: 10rem;
+      font-size: 7rem;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -54,6 +54,9 @@
       );
       background-clip: text;
       color: transparent;
+      @media screen and (min-width:768px) {
+        font-size: 10rem;
+      }
       @media screen and (min-width: 1200px) {
         font-size: 15rem;
       }
