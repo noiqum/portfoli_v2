@@ -184,6 +184,7 @@ function Portfolio() {
           initial="initial"
         >
           <motion.span
+          style={{color:project.name === "agora" ? "white" : "#027D29"}}
             onClick={() => {
               projectHandle("agora");
             }}
@@ -192,6 +193,7 @@ function Portfolio() {
             Agora
           </motion.span>
           <motion.span
+           style={{color:project.name === "agora" ? "white" : "#027D29"}}
             onClick={() => {
               projectHandle("agora");
             }}
@@ -200,6 +202,7 @@ function Portfolio() {
             1
           </motion.span>
           <motion.span
+          style={{color:project.name === "corner" ? "white" : "#027D29"}}
             onClick={() => {
               projectHandle("corner");
             }}
@@ -208,6 +211,7 @@ function Portfolio() {
             Corner
           </motion.span>
           <motion.span
+           style={{color:project.name === "corner" ? "white" : "#027D29"}}
             onClick={() => {
               projectHandle("corner");
             }}
@@ -216,6 +220,7 @@ function Portfolio() {
             2
           </motion.span>
           <motion.span
+           style={{color:project.name === "100 Days" ? "white" : "#027D29"}}
             onClick={() => {
               projectHandle("challenge");
             }}
@@ -224,6 +229,7 @@ function Portfolio() {
             Challenge
           </motion.span>
           <motion.span
+           style={{color:project.name === "100 Days" ? "white" : "#027D29"}}
             onClick={() => {
               projectHandle("challenge");
             }}
@@ -232,6 +238,7 @@ function Portfolio() {
             3
           </motion.span>
           <motion.span
+           style={{color:project.name === "coder academy" ? "white" : "#027D29"}}
             onClick={() => {
               projectHandle("coder");
             }}
@@ -240,6 +247,7 @@ function Portfolio() {
             Coder
           </motion.span>
           <motion.span
+           style={{color:project.name === "coder academy" ? "white" : "#027D29"}}
             onClick={() => {
               projectHandle("coder");
             }}
@@ -248,6 +256,7 @@ function Portfolio() {
             4
           </motion.span>
           <motion.span
+           style={{color:project.name === "wallet" ? "white" : "#027D29"}}
             onClick={() => {
               projectHandle("wallet");
             }}
@@ -256,6 +265,7 @@ function Portfolio() {
             Wallet
           </motion.span>
           <motion.span
+           style={{color:project.name === "wallet" ? "white" : "#027D29"}}
             onClick={() => {
               projectHandle("wallet");
             }}
