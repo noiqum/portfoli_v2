@@ -1,10 +1,24 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import styles from "../css/contact.module.scss";
 
 function Contact() {
   const [email] = useState("onurcoskun99@gmail.com");
+  const [copied,setCopied]=useState(false)
+  /* document.getElementById("email-text").select();
+  document.execCommand("Copy"); */
+  const copyActionHandler=useCallback(()=>{
+   let copyText = document.getElementById("email-text");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(copyText.value);
+    setCopied(true)
+    
+  })
+  const mouseOutHandler=useCallback(()=>{
+    setCopied(false)
+  })
   /////framer-motion objects/////////
   const social = {
     animate: {
@@ -78,17 +92,22 @@ function Contact() {
           Say Hi to me!
         </motion.div>
       </div>
+      <div className={styles.contact_email}>
       <input type="text" value={email} id="email-text"></input>
       <span
+     onMouseOut={()=>mouseOutHandler()}
+     onTouchEnd={()=>mouseOutHandler()}
+     onTouchMove={()=>mouseOutHandler()}
+      className={copied ? styles.contact_email_copied : ""}
         onClick={() => {
-          document.getElementById("email-text").select();
-          document.execCommand("Copy");
+         copyActionHandler()
         }}
       >
-        Copy
+        <img src="/copy.svg" alt="copy" />
       </span>
+      </div>
       <motion.a
-        href="/onur_coskun_cv.pdf"
+        href="/OnurCv.pdf"
         download
         initial={{ x: "100vw", rotate: 0 }}
         animate={{
